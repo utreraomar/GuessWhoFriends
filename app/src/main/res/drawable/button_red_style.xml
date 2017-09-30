@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="false" android:state_pressed="false">
+        <shape>
+            <gradient android:startColor="@color/red_start_gradient" android:endColor="@color/red_end_gradient" android:angle="270" />
+            <stroke   android:width="1px" android:color="@color/border_button" />
+            <corners android:bottomLeftRadius="@dimen/rounded_border"
+                android:bottomRightRadius="@dimen/rounded_border"
+                android:topLeftRadius="@dimen/rounded_border"
+                android:topRightRadius="@dimen/rounded_border"/>
+            <padding  android:left="@dimen/regular_padding"  android:top="@dimen/regular_padding"
+                android:right="@dimen/regular_padding" android:bottom="@dimen/regular_padding" />
+        </shape>
+    </item>
+
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/button_pressed_style"/>
+
+</selector>

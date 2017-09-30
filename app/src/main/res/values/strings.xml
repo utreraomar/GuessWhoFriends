@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Guess Who? Friends</string>
+    <string name="facebook_app_id">273118589842090</string>
+    <string name="fb_login_protocol_scheme">fb273118589842090</string>
+    <string name="btn_play">Jugar</string>
+    <string name="btn_config">Configuracion</string>
+    <string name="btn_achievments">Logros</string>
+    <string name="logfb_message">Para el correcto funcionamiento de este juego es
+        necesario iniciar sesion en Facebook</string>
+    <string name="btnOne">Opcion 1</string>
+    <string name="btnTwo">Opcion 2</string>
+    <string name="btnThree">Opcion 3</string>
+    <string name="btnFour">Opcion 4</string>
+</resources>

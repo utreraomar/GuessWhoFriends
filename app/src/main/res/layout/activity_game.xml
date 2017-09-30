@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/background_abstract"
+    tools:context="com.example.arturo.guesswhofriends.GameActivity">
+
+    <ImageView
+        android:id="@+id/imgFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CharacterImage"
+        android:src="@drawable/test_image"
+        android:background="@drawable/image_view_style"/>
+
+    <Button
+        android:id="@+id/btnOne"
+        android:text="@string/btnOne"
+        android:layout_below="@+id/imgFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnTwo"
+        android:text="@string/btnTwo"
+        android:layout_below="@+id/btnOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnThree"
+        android:text="@string/btnThree"
+        android:layout_below="@+id/btnTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnFour"
+        android:text="@string/btnFour"
+        android:layout_below="@+id/btnThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"/>
+
+    <ProgressBar
+        android:id="@+id/pgbMaxTime"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="25"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
