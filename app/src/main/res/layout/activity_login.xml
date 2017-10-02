@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/com_facebook_loginview_default_style"
-    tools:context="com.example.arturo.guesswhofriends.LoginActivity">
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="wrap_content"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/fb_regular"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:minWidth="20dp"
-        android:minHeight="20dp"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"/>
+        style="@style/com_facebook_loginview_default_style"
+        tools:context="com.example.arturo.guesswhofriends.LoginActivity">
 
-    <TextView
-        android:id="@+id/txtLoginMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/big_text"
-        android:text="@string/logfb_message"
-        android:layout_below="@+id/imgLogo"
-        style="@style/LoginFBMessageStyle"/>
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fb_regular"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:minWidth="20dp"
+            android:minHeight="20dp"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"/>
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btnLoginFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/txtLoginMessage"
-        android:layout_margin="@dimen/regular_margin"
-        style="@style/com_facebook_button"
-        />
+        <TextView
+            android:id="@+id/txtLoginMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text"
+            android:text="@string/logfb_message"
+            android:layout_below="@+id/imgLogo"
+            style="@style/LoginFBMessageStyle"/>
 
-</RelativeLayout>
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnLoginFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtLoginMessage"
+            android:layout_margin="@dimen/regular_margin"
+            style="@style/com_facebook_button"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
