@@ -3,6 +3,7 @@ package com.example.arturo.guesswhofriends;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.facebook.AccessToken;
@@ -25,13 +26,20 @@ public class MainActivity extends AppCompatActivity {
 
         updateToken(AccessToken.getCurrentAccessToken());
 
-        tokenTracker = new AccessTokenTracker() {
+        setTokenTracker(new AccessTokenTracker() {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
                 updateToken(currentAccessToken);
             }
-        };
+        });
 
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gameStart = new Intent(getApplicationContext(), GameActivity.class);
+                startActivity(gameStart);
+            }
+        });
 
     }
 
@@ -40,5 +48,13 @@ public class MainActivity extends AppCompatActivity {
             Intent LoginActivity = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(LoginActivity);
         }
+    }
+
+    public AccessTokenTracker getTokenTracker() {
+        return tokenTracker;
+    }
+
+    public void setTokenTracker(AccessTokenTracker tokenTracker) {
+        this.tokenTracker = tokenTracker;
     }
 }

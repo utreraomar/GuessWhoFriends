@@ -1,6 +1,7 @@
 package com.example.arturo.guesswhofriends;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -33,7 +34,11 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
-                finishAndRemoveTask ();
+                if (Build.VERSION.SDK_INT >= 21)
+                    finishAndRemoveTask();
+                else
+                    finish();
+                    System.exit(0);
             }
 
             @Override
